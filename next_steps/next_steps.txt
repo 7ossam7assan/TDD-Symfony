@@ -1,0 +1,24 @@
+The Next Steps Is what I would do in a real job (to be more precise after agreement with business team)
+
+
+*- I would create the invoice with status pending review (it's the pending request from the creditor)
+
+*- There would be an endpoint to change it to pending (to be paid), and (I started my work from here), and add the invoice price to actual debts table.
+ it's called after review process(manually(dashboard admins)/ML-based).
+
+*- Adding endpoint PUT /companies/{company_id}  to adjust the debtor max debt limit, it could be done based on the rate(equation) the debtor paying his debts.
+
+*- Based on the above rate we could have a threshold to block debtor(could make the max allowed debt amount 0 as work-around) also via the above recommended endpoint.
+
+*- If we agreed on the above blocking endpoints the debtor may come later and pay his all debt, and we need to change the max debtor limit or,
+ unblock it if agreed on blocking way/
+
+
+Technical Points to be done
+
+*- Add auth instead of sending companies ids hardcoded.
+
+*- Technical Point upload invoice documents to a file storage service and return the file url from there.
+
+*- Remove feature branches after they are tested & deployed.
+

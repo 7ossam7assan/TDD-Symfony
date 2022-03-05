@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "efa71af9-55c3-40c3-a0eb-7c97faccfa0b",
+		"name": "billie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add | Invoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "creditor_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "debtor_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/home/hh/Downloads/Hossam's Resume.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add | Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Amazon",
+							"type": "text"
+						},
+						{
+							"key": "bank_name",
+							"value": "AAIB",
+							"type": "text"
+						},
+						{
+							"key": "swift_code",
+							"value": "AAIB111ZZZa",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/home/hh/Downloads/Hossam's Resume.pdf",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/companies",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay | Invoice",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/api/invoices/1/pay",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"invoices",
+						"1",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:80"
+		}
+	]
+}
