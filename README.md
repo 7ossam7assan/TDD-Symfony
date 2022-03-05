@@ -1,4 +1,4 @@
-##Billie Task
+## Task
 
 ##installation
 
@@ -8,7 +8,7 @@
     - make sure those ports are free [80, 3306, 8080, 443]
     - For the first run you have to build the image so run `sudo docker-compose up -d`.
     - To stop the project `sudo docker-compose down`.
-    - To get into the container and run composer and artisan command run `sudo docker exec -it Billie-php8 bash`
+    - To get into the container and run composer and artisan command run `sudo docker exec -it TDD-php8 bash`
 
 
 
@@ -20,10 +20,10 @@
         - mysql8
       
 - ## Testing on host
-    - use the attached postman collection `billie.postman_collection` replace url env variable with the right one for you for docker-version it's http://localhost
+    - use the attached postman collection `tdd.postman_collection` replace url env variable with the right one for you for docker-version it's http://localhost
 
 - ## Testing local
-    - I've attached the postman collection `billie.postman_collection`
+    - I've attached the postman collection `tdd.postman_collection`
 
 ## Tools
 - symfony5
